@@ -1,0 +1,30 @@
+mysql> create table BDO_PROJECT
+    -> (
+    -> pid int primary key auto_increment,
+    -> pname varchar(20),
+    -> pduration varchar(10),
+    -> budget int
+    -> );
+Query OK, 0 rows affected (0.43 sec)
+
+mysql> create table GPM
+    -> (
+    -> mid int primary key,
+    -> mname varchar(20) not null,
+    -> panchayet varchar(20) not null,
+    -> password varchar(6) not null,
+    -> FOREIGN KEY (mid) references BDO_PROJECT (pid)
+    -> );
+Query OK, 0 rows affected (0.43 sec)
+
+mysql> create table EMPLOYEE
+    -> (
+    -> empid int primary key,
+    -> empName varchar(20) not null,
+    ->
+    -> wages int not null,
+    -> deptid int not null,
+    -> foreign key (deptid) references GPM (mid)
+    -> );
+Query OK, 0 rows affected (0.74 sec)
+

@@ -260,42 +260,4 @@ public class ProjectImpl implements BDOProject{
 		
 		return list;
 	}
-	@Override
-	public List<Worker> getAllEmployeeById(int id) throws EmployeeException {
-		List<Worker> list = new ArrayList<>();
-		
-		try(Connection conn = DBConn.provideConnection()) {
-			
-			PreparedStatement ps = conn.prepareStatement("select * from worker where pid=?");
-			ps.setInt(1, id);
-			ResultSet rs = ps.executeQuery();
-			
-			while(rs.next()) {
-				
-				
-				int mid = rs.getInt("wid");
-				String name = rs.getString("wname");
-				int wages = rs.getInt("wages");
-				int totalDays = rs.getInt("day_worked");
-				int pid = rs.getInt("pid");
-				
-				Worker wor = new Worker(mid, name, wages, totalDays, pid);
-				
-				list.add(wor);
-				
-			}
-			
-		} catch (Exception e) {
-			throw new EmployeeException(e.getMessage());
-		}
-		
-		return list;
-	}
-//	@Override
-//	public void panchayetwiseTotaldaysAndWages(int id) {
-//		// TODO Auto-generated method stub
-//		
-//	}
-	
-	
-}
+

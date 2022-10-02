@@ -30,9 +30,5 @@ public interface BDOProject {
 	public String assignEmployeeToProject(Worker worker);
 	
 	public List<Worker> getAllEmployee() throws EmployeeException;
-	
-	public List<Worker> getAllEmployeeById(int id) throws EmployeeException;
-	
-	//public void panchayetwiseTotaldaysAndWages(int id);
-	
+
 }
