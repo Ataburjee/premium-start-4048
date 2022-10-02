@@ -30,5 +30,5 @@ public interface BDOProject {
 	public String assignEmployeeToProject(Worker worker);
 	
 	public List<Worker> getAllEmployee() throws EmployeeException;
-	
+
 }

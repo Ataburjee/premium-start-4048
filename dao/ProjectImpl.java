@@ -236,7 +236,7 @@ public class ProjectImpl implements BDOProject{
 		try(Connection conn = DBConn.provideConnection()) {
 			
 			PreparedStatement ps = conn.prepareStatement("select * from worker");
-//			ps.setInt(1, getId);
+
 			ResultSet rs = ps.executeQuery();
 			
 			while(rs.next()) {
@@ -260,6 +260,4 @@ public class ProjectImpl implements BDOProject{
 		
 		return list;
 	}
-	
-	
-}
+
