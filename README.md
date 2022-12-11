@@ -47,4 +47,4 @@
 - If we want to add some employee then only admin can do that user should give the correct name of the admin and password properly.
 
 ## Team members & contributions:
-- It is a individual project at the early stage of learning in java language.
+- It is an individual project developed by me at the early stage of learning in java language.
